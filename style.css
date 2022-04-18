@@ -151,6 +151,7 @@ body {
   top: 4px;
 }
 .greeting__image {
+  -webkit-user-select: none;
   max-width: 37.56%;
   height: auto;
   object-position: center;
@@ -213,6 +214,7 @@ body {
   margin: 0 -3%;
 }
 .info__bubbles {
+  -webkit-user-select: none;
   padding: 0 3%;
   flex: 0 0 50%;
   display: flex;
@@ -574,12 +576,6 @@ body {
 
   .footer__icon {
     margin: 0;
-  }
-}
-@media (hover: none) {
-  .greeting__image {
-    filter: none;
-    -webkit-filter: none;
   }
 }
 
