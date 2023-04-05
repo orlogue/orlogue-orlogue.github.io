@@ -1,2 +1,2 @@
 # Personal website
-### URL: https://orlogue.xyz/
+### URL: https://orlogue.github.io/
