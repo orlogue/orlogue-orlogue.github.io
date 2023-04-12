@@ -114,8 +114,9 @@ body {
 }
 
 .greeting {
-  margin: 5.8% 0;
   padding: 0 8.4%;
+  height: 100vh;
+  display: flex;
 }
 .greeting::before {
   content: "";
@@ -133,6 +134,10 @@ body {
 .greeting__row {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+.container:has(.greeting__row) {
+  display: flex;
 }
 .greeting__text-body {
   flex: 0 1 60%;
@@ -203,6 +208,7 @@ body {
 .info {
   flex: 1 0 auto;
   display: flex;
+  height: calc(100vh - 80px);
   align-items: center;
   padding: 5.9% 4.165%;
   background: #1a1a1a;
@@ -472,12 +478,31 @@ body {
   }
 
   .info__text-body {
+    margin: 2em 0 0 0;
     padding: 0;
   }
 }
 @media (max-width: 575.98px) {
   .container {
-    max-width: 540px;
+    max-width: none;
+  }
+
+  .greeting {
+    padding: 0 6%;
+  }
+
+  .greeting__row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .greeting__image {
+    max-width: 90%;
+    padding: 1em 1em 5em 1em;
+  }
+
+  .greeting__text-body {
+    margin: 4em 0 2em 0;
   }
 
   .greeting__row {
@@ -516,23 +541,13 @@ body {
   }
 }
 @media (max-width: 480.98px) {
-  .container {
-    max-width: none;
-  }
-
-  .greeting {
-    padding: 0 6%;
-  }
-
-  .greeting__row {
-    flex-direction: column;
-    align-items: center;
-    margin: 0 0 2% 0;
-  }
-
   .greeting__image {
-    max-width: 82%;
-    padding: 10px;
+    max-width: 100%;
+    padding: 1em 1em 4em 1em;
+  }
+
+  .greeting__text-body {
+    margin: 4em 0 2em 0;
   }
 
   .greeting__text-body {
