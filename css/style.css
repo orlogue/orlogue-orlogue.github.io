@@ -595,7 +595,7 @@ body {
   }
 }
 
-@media (max-height: 767.98px) {
+@media (max-height: 709.98px) {
   .info {
     height: auto;
   }
@@ -633,6 +633,10 @@ body {
 
   .info {
     padding: 8% 6%;
+  }
+
+  .info__text-body {
+    margin: 0;
   }
 
   .info__bubbles {
