@@ -312,22 +312,18 @@ body {
   margin: 0;
 }
 
-.info__text .p1-color a {
+.info__text p a {
   color: #9880ee;
   text-decoration: underline;
   text-underline-offset: 5px;
 }
 
-.info__text .p1-color a:hover {
+.info__text p a:hover {
   color: #7050e1;
 }
 
-.info__text .p1-color a:active {
+.info__text p a:active {
   color: #4c20ee;
-}
-
-.info__text .p2-italic span {
-  font-style: italic;
 }
 
 @keyframes jiggle {
