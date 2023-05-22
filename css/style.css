@@ -546,7 +546,7 @@ body {
   }
 
   .greeting__image {
-    max-width: 100%;
+    max-width: clamp(80%, 40vh, 100%);
     padding-bottom: 1em;
   }
 
@@ -607,10 +607,6 @@ body {
   .greeting__text-body {
     flex: 1 1 auto;
     margin: 2em 0;
-  }
-
-  .greeting__image {
-    max-width: 90%;
   }
 
   .info__title {
