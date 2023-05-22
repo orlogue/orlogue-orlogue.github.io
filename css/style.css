@@ -536,6 +536,8 @@ body {
 
   .greeting {
     padding: 0 6%;
+    min-height: 100svh;
+    height: auto;
   }
 
   .greeting__row {
@@ -604,11 +606,7 @@ body {
 @media (max-width: 480.98px) {
   .greeting__text-body {
     flex: 1 1 auto;
-    margin: 0 0 2em 0;
-  }
-
-  .greeting__image {
-    max-width: 80%;
+    margin: 2em 0;
   }
 
   .info__title {
