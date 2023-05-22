@@ -185,11 +185,6 @@ body {
   -webkit-filter: none;
 }
 
-.bottom-arrow {
-  width: 0;
-  transform: translateX(-1.75em);
-}
-
 .arrow-down-short {
   fill: #cdd4da;
   width: 3.5em;
@@ -528,7 +523,7 @@ body {
 @media (min-width: 576px) {
   .bottom-arrow {
     position: absolute;
-    left: 50%;
+    left: calc(50% - 28px);
     bottom: 0;
   }
 }
