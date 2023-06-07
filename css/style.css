@@ -120,19 +120,34 @@ body {
   display: flex;
 }
 
-.greeting::before {
-  content: "";
+/*.greeting::before {*/
+/*  content: "";*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  z-index: -1;*/
+/*  display: block;*/
+/*  background: url("../images/keyboard.jpeg") top/cover no-repeat;*/
+/*  width: 100vw;*/
+/*  height: 100vh;*/
+/*  height: 100svh;*/
+/*  filter: blur(20px);*/
+/*  -webkit-filter: blur(20px);*/
+/*}*/
+
+.greeting__background {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
-  display: block;
-  background: url("../images/keyboard.jpeg") top/cover no-repeat;
+  z-index: -10;
+  object-position: top;
+  object-fit: cover;
+  background-repeat: no-repeat;
   width: 100vw;
   height: 100vh;
   height: 100svh;
-  filter: blur(20px);
-  -webkit-filter: blur(20px);
+  filter: blur(20px) contrast(105%);
+  -webkit-filter: blur(20px) contrast(105%);
 }
 
 .greeting__row {
@@ -163,24 +178,68 @@ body {
   display: block;
 }
 
-.greeting__text span {
+.greeting__image {
   position: relative;
-  top: 4px;
+  max-width: 37.56%;
+  background: url("../images/me-small.jpeg") center/contain no-repeat;
+  filter: blur(2px) grayscale(100%);
+  -webkit-filter: blur(2px) grayscale(100%);
 }
 
-.greeting__image {
+
+.greeting__image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    background: rgba(255, 255, 255, 0);
+  }
+  50% {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  100% {
+    background: rgba(255, 255, 255, 0);
+  }
+}
+
+.greeting__image.loaded::before {
+  content: none;
+}
+
+.greeting__image.loaded {
+  filter: none;
+  -webkit-filter: none;
+}
+
+.greeting__image > .image-me {
+  opacity: 0;
+}
+
+.greeting__image.loaded > .image-me {
+  opacity: 1;
+}
+
+.grayscale-transition {
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+}
+
+.image-me {
+  user-select: none;
   -webkit-user-select: none;
-  max-width: 37.56%;
+  max-width: 100%;
   height: auto;
   object-position: center;
   object-fit: contain;
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
-  transition: all 0.3s ease-out;
-  -webkit-transition: all 0.3s ease-out;
 }
 
-.greeting__image:hover {
+.image-me:hover {
   filter: none;
   -webkit-filter: none;
 }
@@ -547,7 +606,7 @@ body {
 
   .greeting__image {
     max-width: clamp(80%, 70vw, 100%);
-    padding-bottom: 1em;
+    margin-bottom: 1em;
   }
 
   .greeting__text-body {
