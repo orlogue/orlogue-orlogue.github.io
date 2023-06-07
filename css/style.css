@@ -221,21 +221,22 @@ body {
 .greeting__image > .image-me {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
 }
 
 .greeting__image.loaded > .image-me {
   opacity: 1;
   transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;;
 }
 
 .image-me {
-  user-select: none;
-  -webkit-user-select: none;
   max-width: 100%;
   height: auto;
   object-position: center;
   object-fit: contain;
   filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);;
   border-radius: inherit;
 }
 
@@ -610,6 +611,11 @@ body {
     margin-bottom: 1em;
     aspect-ratio: 1 / 1;
     padding-bottom: 100%;
+  }
+
+  .image-me {
+    filter: none;
+    -webkit-filter: none;
   }
 
   .greeting__text-body {
