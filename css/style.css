@@ -172,7 +172,10 @@ body {
   flex: 1 1 40%;
   aspect-ratio: 0.799;
   border-radius: 1rem;
-  background: url("../images/me-smaller.jpeg") center/contain no-repeat;
+  background-image: url("../images/me-smaller.jpeg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
   filter: blur(4px) grayscale(100%);
   -webkit-filter: blur(4px) grayscale(100%);
 }
