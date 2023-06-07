@@ -12,6 +12,6 @@ if (imageMe.complete) {
     loaded();
     setTimeout(() => {
       greetingImageDiv.querySelector('.grayscale').remove()
-    }, 250)
+    }, 350)
   });
 }
