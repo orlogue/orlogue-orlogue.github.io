@@ -607,7 +607,7 @@ body {
   }
 
   .greeting__image {
-    max-width: clamp(80%, 70vw, 100%);
+    width: clamp(80%, 70vw, 100%);
     margin-bottom: 0.75em;
   }
 
