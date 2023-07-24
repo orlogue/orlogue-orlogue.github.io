@@ -6,12 +6,13 @@ function loaded() {
 }
 
 if (imageMe.complete) {
-  loaded()
+  loaded();
 } else {
   imageMe.addEventListener('load', () => {
     loaded();
     setTimeout(() => {
-      greetingImageDiv.querySelector('.grayscale').remove()
-    }, 350)
+      greetingImageDiv.querySelector('.grayscale').remove();
+      greetingImageDiv.classList.add('bg-none');
+    }, 350);
   });
 }

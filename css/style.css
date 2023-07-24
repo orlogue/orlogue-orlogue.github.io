@@ -218,6 +218,10 @@ body {
   -webkit-filter: none;
 }
 
+.bg-none {
+  background-image: none;
+}
+
 .greeting__image > .image-me {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
