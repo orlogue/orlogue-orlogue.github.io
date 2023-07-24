@@ -12,7 +12,6 @@ if (imageMe.complete) {
     loaded();
     setTimeout(() => {
       greetingImageDiv.querySelector('.grayscale').remove();
-      greetingImageDiv.classList.add('bg-none');
     }, 350);
   });
 }

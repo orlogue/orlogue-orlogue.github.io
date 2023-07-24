@@ -218,10 +218,6 @@ body {
   -webkit-filter: none;
 }
 
-.bg-none {
-  background-image: none;
-}
-
 .greeting__image > .image-me {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
@@ -612,9 +608,7 @@ body {
 
   .greeting__image {
     max-width: clamp(80%, 70vw, 100%);
-    margin-bottom: 1em;
-    aspect-ratio: 1 / 1;
-    padding-bottom: 100%;
+    margin-bottom: 0.75em;
   }
 
   .image-me {
